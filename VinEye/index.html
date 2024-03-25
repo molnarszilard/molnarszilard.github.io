@@ -134,24 +134,55 @@ Then, we evaluated the quality of the dataset using
 
 <section class="section">
   <div class="container is-max-desktop">
-
-
     <!-- Segmentation. -->
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Segmentation</h2>
+          <h2 class="title is-3">Feature Pyramid Network based Proximal Vine Canopy Segmentation</h2>
           <center><img src="static/images/July04_USAMV_DJI_0231_f_01500_annotations.png" alt="Alternative Text" width="80%" class="center"></center>
           <div class="content has-text-justified">
             <p>
-              Segment the vine canopy using Feature Pyramid Network model. 
+              With the widening of the Agriculture 4.0 era, the use of autonomous robots in the agriculture field is becoming a priority. The key component of such an autonomous, often multi-robot system is the perception of the environment, which is based on 2D and 3D cameras. A base processing part of the 2D images is the segmentation of different zones in the images. This is the case also in the vineyards where in order to process complex plant canopies, segmenting the parts of the image containing the area of interest is a part of the pre-processing chain. In this work, we present a Feature Pyramid Network-based grape canopy segmentation method, which has great potential to create a segmentation mask, containing only the leaves and fruits of interest. We conducted our tests in different vineyards and we also obtained the above state-of-the-art segmentation results on public and custom datasets. 
             </p>
           </div>
         </div>
       </div>
     </div>
     <!--/ Segmentation. -->
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Segmentation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Segmentation Methods Evaluation on Grapevine Leaf Diseases</h2>
+          <!-- <center><img src="static/images/July04_USAMV_DJI_0231_f_01500_annotations.png" alt="Alternative Text" width="80%" class="center"></center> -->
+          <div class="content has-text-justified">
+            <p>
+              he problem of vine disease detection (VDD) was
+addressed in a number of research papers, however, a generic
+solution is not yet available for this task in the community.
+The region of interest segmentation and object detection tasks
+are often complementary. A similar situation is encountered
+in VDD applications as well, in which crop or leaf detection
+can be done via instance segmentation techniques as well. The
+focus of this work is to validate the most suitable methods
+from the main literature on vine leaf segmentation and disease
+detection on a custom dataset containing leaves both from the
+laboratory environment and cropped from images in the field. We
+tested five promising methods including the Otsu’s thresholding,
+Mask R-CNN, MobileNet, SegNet, and Feature Pyramid Network
+variants. The results of the comparison are available in Table I
+summarizing the accuracy and runtime of different methods. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Segmentation. -->
   </div>
 </section>
 
@@ -172,6 +203,20 @@ Then, we evaluated the quality of the dataset using
       doi     = {10.1016/j.ifacol.2023.10.097},
     }
     </code></pre>
+
+    <pre><code>@InProceedings{molnar2023segmentationmethodsevaluation,
+      author    = {Szil{\'{a}}rd Moln{\'{a}}r and Levente Tam{\'{a}}s},
+      booktitle = {Proceedings of the 18th Conference on Computer Science and Intelligence Systems, FedCSIS 2023, Warsaw, Poland, September 17-20, 2023},
+      title     = {{Segmentation Methods Evaluation on Grapevine Leaf Diseases}},
+      year      = {2023},
+      editor    = {Maria Ganzha and Leszek A. Maciaszek and Marcin Paprzycki and Dominik Slezak},
+      pages     = {1081--1085},
+      series    = {Annals of Computer Science and Information Systems},
+      volume    = {35},
+      doi       = {10.15439/2023F7053},
+    }    
+    </code></pre>
+
   </div>
 </section>
 

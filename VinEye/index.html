@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="keywords" content="VinEye, Monitoring, VDD, Precision Viticulture, Agronomy 4.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SAM-Net</title>
+  <title>VinEye</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -92,64 +92,40 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <center><img src="static/images/vineyardmap.png" alt="Alternative Text" class="center"></center>
+      <center><img src="static/images/vineye_overview.png" alt="Alternative Text" class="center"></center>
       <!-- <center><img src="static/images/intro_0.png" alt="Alternative Text"  width="70%" class="center"></center> -->
       <h2 class="subtitle has-text-centered">
-        In this publicly available dataset we surveyed vineyards at various locations. 
+        Monitoring vineyards using UAVs and UGVs based on computer vision, deep learning, and robotics. 
       </h2>
     </div>
   </div>
 </section>
 
-
+<!-- Dataset. -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <h2 class="title is-3">Dataset</h2>
+      <center><img src="static/images/vineyardmap.png" alt="Alternative Text" width="80%" class="center"></center>
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Vine disease detection is considered to be one of the most crucial components in precision viticulture. It serves as an input for several further modules, including mapping, automatic treatment and spraying devices. In the last few years, several approaches were proposed for detecting vine disease based on indoor laboratory conditions or on large-scale satellite images, integrated with machine learning tools. However, these methods have several limitations, including laboratory-specific conditions or limited visibility into plant-related diseases. To overcome these limitations, we propose a low-altitude drone flight approach through which we generate a comprehensive dataset about various vine diseases from a large-scale dataset in Europe. The dataset contains typical diseases such as downy mildew or black rot affecting the large variety of grapes including Muscat of Hamburg, Alphonse Lavallée, Grasă de Cotnari, Rkatsiteli, Napoca, Pinot blanc, Pinot gris, Chambourcin, Fetească regală, Sauvignon blanc, Muscat Ottonel, Merlot, and Seyve-Villard 18402. The data set contains 10,000 images and more than 100,000 annotated leaves, which were verified by viticulture specialists. Grape bunches are also annotated for yield estimation.
+Further, we tested state-of-the-art detection methods on this dataset focusing also on viable solutions on embedded devices, including Android-based phones or Nvidia Jetson boards with GPU.
+        </p>
+      </div>
+      <center><img src="static/images/July04_USAMV_IMG_7427_f_05000_cropped.jpg" alt="Alternative Text" width="80%" class="center"></center>
+      <center><img src="static/images/Cluj_Aug03_DJI_0562_f_04600_fpfn.jpg" alt="Alternative Text" width="80%" class="center"></center>
+    </div>
+  </div>
+</div>
+<!--/ Dataset. -->
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Vine disease detection is considered to be one of the most crucial components in precision viticulture. It serves as an input for several further modules, including mapping, automatic treatment and spraying devices. In the last few years, several approaches were proposed for detecting vine disease based on indoor laboratory conditions or on large-scale satellite images, integrated with machine learning tools. However, these methods have several limitations, including laboratory-specific conditions or limited visibility into plant-related diseases. To overcome these limitations, we propose a low-altitude drone flight approach through which we generate a comprehensive dataset about various vine diseases from a large-scale dataset in Europe. The dataset contains typical diseases such as downy mildew or black rot affecting the large variety of grapes including Muscat of Hamburg, Alphonse Lavallée, Grasă de Cotnari, Rkatsiteli, Napoca, Pinot blanc, Pinot gris, Chambourcin, Fetească regală, Sauvignon blanc, Muscat Ottonel, Merlot, and Seyve-Villard 18402. The data set contains 10,000 images and more than 100,000 annotated leaves, which were verified by viticulture specialists. Grape bunches are also annotated for yield estimation.
-Further, we tested state-of-the-art detection methods on this dataset focusing also on viable solutions on embedded devices, including Android-based phones or Nvidia Jetson boards with GPU.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!--/ Abstract. -->
-
-    <!-- Method. -->
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Method</h2>
-          
 
 
-
-<div class="latex">  
-    </div>
-          <center><img src="static/images/July04_USAMV_IMG_7427_f_05000_cropped.png" alt="Alternative Text" width="100%" class="center"></center>
-        </div>
-      </div>
-    </div>
-    <!--/ Method. -->
-  
-    <!-- Visualization. -->
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visualization</h2>
-          <center><img src="static/images/docs/Cluj_Aug03_DJI_0562_f_04600_fpfn.jpg" alt="Alternative Text" width="80%" class="center"></center>
-        </div>
-      </div>
-    </div>
-    <!--/ Visualization. -->
-
-    <!-- Benchmarking. -->
+    <!-- Segmentation. -->
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
@@ -158,27 +134,29 @@ Further, we tested state-of-the-art detection methods on this dataset focusing a
         </div>
       </div>
     </div>
-    <!--/ Benchmarking. -->
+    <!--/ Segmentation. -->
 
   </div>
 
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{KELENYI2024122804,
-  author    = {Benjamin Kelenyi, Victor Domsa, Levente Tamas},
-  title     = {SAM-Net: Self-Attention based Feature Matching with Spatial transformers and Knowledge Distillation},
-  journal   = {Expert Systems with Applications},
-  volume    = {242},
-  pages     = {122804},
-  year      = {2024},
-  issn      = {0957-4174},
-  doi       = {https://doi.org/10.1016/j.eswa.2023.122804}
-}</code></pre>
+    <pre><code>@Article{molnar2023fpncanopy,
+      author  = {Szil{\'a}rd Moln{\'a}r and Barna Keresztes and Levente Tam{\'a}s},
+      journal = {IFAC-PapersOnLine},
+      title   = {{Feature Pyramid Network based Proximal Vine Canopy Segmentation}},
+      year    = {2023},
+      note    = {22nd IFAC World Congress},
+      number  = {2},
+      pages   = {8920--8925},
+      volume  = {56},
+      doi     = {10.1016/j.ifacol.2023.10.097},
+    }
+    </code></pre>
   </div>
-</section> -->
+</section>
 
 </body>
 </html>

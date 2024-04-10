@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="direction, oriented bounding box">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directional Bounding Boxes for Oriented Object Detection</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Directional Bounding Boxes for Oriented Object Detection</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://molnarszilard.github.io/">Szilárd Molnár</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://rocon.utcluj.ro/~levente">Levente Tamás</a><sup>1</sup>, and</span>
+              <span class="author-block">
+                <a href="http://www.inf.u-szeged.hu/~kato/">Zoltán Kató</a><sup>2,3</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">1 - Technical University of Cluj-Napoca, Memorandumului 28, 400114 Romania
+              {Szilard.Molnar,Levente.Tamas}@aut.utcluj.ro
+            </span>
+            <span class="author-block">2 - J. Selye University, Slovakia</span>
+            <span class="author-block">3 - Institute of Informatics, University of Szeged, Hungary, kato@inf.u-szeged.hu</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0957417423033067?dgcid=author"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://github.com/tamaslevente/vineye/tree/main/DOBB"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img src="static/images/arch.svg" alt="Alternative Text" class="center"></center>
+      <!-- <center><img src="static/images/intro_0.png" alt="Alternative Text"  width="70%" class="center"></center> -->
+      <h2 class="subtitle has-text-centered">
+        Directed and Oriented Bounding Box detection. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Dataset. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Object detection is a fundamental problem with many ap- plications.
+              The typical solution is to localize detected objects with a bounding
+              box. However, standard (or horizontal) bounding boxes (BB) are not ideal
+              in case of crowded scenes, especially for elongated objects. Hence
+              so-called oriented bounding boxes (OBB) became popular which will
+              localize objects by a minimal enclosing box. The name oriented refers to
+              the technique behind, which introduces a rotation angle of a standard BB
+              for a better enclosing of the detected object. However, this orien-
+              tation may or may not correspond to the orientation of the detected
+              object, even for elongated objects – e.g. the front of a plane or a car
+              is still not detected and even the OBB orientation is rather
+              representing the perspective distortion than the inherent direction of
+              an object. Thus true-oriented object detection is still an unsolved
+              problem! Herein, we propose a novel method (and to the best of our
+              knowledge the first such method), the Directional Object Bounding Box
+              (DOBB), which is capable of detecting the object’s own direction
+              together with its minimal enclos- ing box (OBB). The proposed method is
+              integrated into the popular YOLO object detector to create a complete
+              directional object detector. Comparative tests confirm its
+              state-of-the-art performance on the public aerial dataset DOTA (for
+              man-made objects) and a custom agricultural vine leaf dataset (for
+              natural objects).</p>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Segmentation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Note</h2>
+          <div class="content has-text-justified">
+            <p>This repository presents the code to the Directed Oriented Bounding
+            Box (DOBB) detection method. This methoed is based on the <a
+            href="https://docs.ultralytics.com/tasks/obb/">YOLOv8-OBB</a> method<a
+            href="#1">[1]</a>. See example scripts on how to run in the <a
+            href="examples/">examples</a> folder. The <a
+            href="https://docs.ultralytics.com/tasks/obb/">YOLOv8-OBB</a> will ask
+            you to install the ultralytics package, however, since DOBB is currently
+            not part of the ultralytics package, you need to create a new
+            environment with required packages, without installing ultralytics
+            itself. See the <a
+            href="ultralytics/blob/main/pyproject.toml">pyproject.toml</a> file for
+            the required dependencies. For more information on the setup and the
+            code itself please visit the original <a
+            href="https://github.com/ultralytics/ultralytics">source code</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Segmentation. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Segmentation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Dataset</h2>
+          <div class="content has-text-justified">
+            <p>For the DOTA dataset please refer to the original <a
+              href="https://docs.ultralytics.com/datasets/obb/">Ultralytics
+              page</a>.</p>
+              <p>The Leaf dataset will be shortly available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Segmentation. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Segmentation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Evaluation</h2>
+          <div class="content has-text-justified">
+            <p>We evaluate the accuracy of the OBB detection using mAP50, while the
+              accuracy of the direction using angle error, and edge error.</p>
+              <table>
+              <colgroup>
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              </colgroup>
+              <thead>
+              <tr class="header">
+              <th>Method</th>
+              <th>Backbone</th>
+              <th>PL</th>
+              <th>SH</th>
+              <th>LV</th>
+              <th>SV</th>
+              <th>HC</th>
+              <th>Leaf</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="odd">
+              <td>CenterNet <a href="#2">[2]</a></td>
+              <td>DLA-34</td>
+              <td>81</td>
+              <td>64.9</td>
+              <td>64</td>
+              <td>38.6</td>
+              <td>57.4</td>
+              <td>-</td>
+              </tr>
+              <tr class="even">
+              <td>DRN <a href="#3">[3]</a></td>
+              <td>Hourglass-52</td>
+              <td>89.71</td>
+              <td>85.84</td>
+              <td>74.43</td>
+              <td>76.22</td>
+              <td>58.48</td>
+              <td>-</td>
+              </tr>
+              <tr class="odd">
+              <td>BBAVect <a href="#4">[4]</a></td>
+              <td>R-101</td>
+              <td>88.63</td>
+              <td>88.06</td>
+              <td>80.4</td>
+              <td>78.26</td>
+              <td>63.96</td>
+              <td>-</td>
+              </tr>
+              <tr class="even">
+              <td>S2ANET <a href="#5">[5]</a></td>
+              <td>R-101-FPN</td>
+              <td>89.28</td>
+              <td>89.21</td>
+              <td>82.93</td>
+              <td><em>80.18</em></td>
+              <td>65.55</td>
+              <td>-</td>
+              </tr>
+              <tr class="odd">
+              <td>GWD <a href="#6">[6]</a></td>
+              <td>R-152</td>
+              <td>89.66</td>
+              <td>87.7</td>
+              <td>84.83</td>
+              <td>78.91</td>
+              <td>74.92</td>
+              <td>-</td>
+              </tr>
+              <tr class="even">
+              <td>G-REP <a href="#7">[7]</a></td>
+              <td>Swin-T</td>
+              <td>88.15</td>
+              <td>88.37</td>
+              <td><em>85.68</em></td>
+              <td><strong>80.94</strong></td>
+              <td><em>75.83</em></td>
+              <td>-</td>
+              </tr>
+              <tr class="odd">
+              <td>GGHL <a href="#8">[8]</a></td>
+              <td>DarkNet53</td>
+              <td>89.16</td>
+              <td>87.58</td>
+              <td>82.26</td>
+              <td>77.29</td>
+              <td>70.47</td>
+              <td>-</td>
+              </tr>
+              <tr class="even">
+              <td>YOLOv8-OBB <a href="#1">[1]</a></td>
+              <td>CSPDarkNet53</td>
+              <td><strong>96.9</strong></td>
+              <td><strong>92.2</strong></td>
+              <td><strong>86.7</strong></td>
+              <td>69.2</td>
+              <td><strong>78.3</strong></td>
+              <td><strong>80.4</strong></td>
+              </tr>
+              <tr class="odd">
+              <td><strong>DOBB</strong></td>
+              <td>CSPDarkNet53</td>
+              <td><em>96.6</em></td>
+              <td><em>92.2</em></td>
+              <td>85.3</td>
+              <td>64.8</td>
+              <td>75.4</td>
+              <td><em>80.3</em></td>
+              </tr>
+              </tbody>
+              </table>
+              <figure>
+              <img src="static/images/GT_DOBB-DOTA_ang_diff.eps.png" alt="image" />
+              <figcaption aria-hidden="true">image</figcaption>
+              </figure>
+              <figure>
+              <img src="static/images/GT_DOBB-Leaf_ang_diff.eps.png" alt="image" />
+              <figcaption aria-hidden="true">image</figcaption>
+              </figure>
+              <figure>
+              <img src="static/images/GT_DOBB-DOTA_edgeclasses_diff.eps.png" alt="image" />
+              <figcaption aria-hidden="true">image</figcaption>
+              </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Segmentation. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Segmentation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">References</h2>
+          <div class="content has-text-justified">
+            <p><a id="1">[1]</a> Jocher, G., Chaurasia, A., &amp; Qiu, J. (2023).
+              Ultralytics YOLO (Version 8.0.0) [Computer software].
+              https://github.com/ultralytics/ultralytics</p>
+              <p><a id="2">[2]</a> Duan, K., Bai, S., Xie, L., Qi, H., Huang, Q.,
+              Tian, Q.: CenterNet: Keypoint Triplets for Object Detection. In:
+              International Conference on Computer Vision. pp. 6568–6577. Seoul, Korea
+              (South) (Oct 2019)</p>
+              <p><a id="3">[3]</a> an, X., Ren, Y., Sheng, K., Dong, W., Yuan, H.,
+              Guo, X., Ma, C., Xu, C.: Dynamic Refinement Network for Oriented and
+              Densely Packed Object Detection. In: Conference on Computer Vision and
+              Pattern Recognition. pp. 11204–11213. Seattle, WA, USA (Jun 2020)</p>
+              <p><a id="4">[4]</a> Yi, J., Wu, P., Liu, B., Huang, Q., Qu, H.,
+              Metaxas, D.N.: Oriented Object Detection in Aerial Images with Box
+              Boundary-Aware Vectors. In: Winter Conference on Applications of
+              Computer Vision. pp. 2149–2158. Waikoloa, HI, USA (Jan 2021)</p>
+              <p><a id="5">[5]</a> Han, J., Ding, J., Li, J., Xia, G.: Align Deep
+              Features for Oriented Object Detection. Transactions on Geoscience and
+              Remote Sensing 60, 1–11 (2022)</p>
+              <p><a id="6">[6]</a> Yang, X., Zhang, G., Li, W., Zhou, Y., Wang, X.,
+              Yan, J.: H2RBox: Horizontal Box Annotation is All You Need for Oriented
+              Object Detection. In: The Eleventh International Conference on Learning
+              Representations. Kigali, Rwanda (May 2023)</p>
+              <p><a id="7">[7]</a> Hou, L., Lu, K., Yang, X., Li, Y., Xue, J.: G-Rep:
+              Gaussian Representation for Arbitrary-Oriented Object Detection. Remote
+              Sensing 15(3), 757 (2023)</p>
+              <p><a id="8">[8]</a> Huang, Z., Li, W., Xia, X.G., Tao, R.: A General
+              Gaussian Heatmap Label Assignment for Arbitrary-Oriented Object
+              Detection. Transactions on Image Processing 31, 1895–1910 (2022)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Segmentation. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    </code></pre>
+
+  </div>
+</section>
+
+</body>
+</html>

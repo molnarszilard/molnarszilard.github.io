@@ -1504,3 +1504,9 @@ body.offcanvas {
   background-color: #3b6fde;
   color: #ffffff;
 }
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #E7002E;
+  color: #ffffff;
+}

@@ -1501,7 +1501,7 @@ body.offcanvas {
 .wrapper .google:hover,
 .wrapper .google:hover .tooltip,
 .wrapper .google:hover .tooltip::before {
-  background-color: #3b6fde;
+  background-color: #ffffff;
   color: #ffffff;
 }
 .wrapper .youtube:hover,

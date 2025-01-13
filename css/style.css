@@ -1516,3 +1516,15 @@ body.offcanvas {
   background-color: #D0EEED;
   color: #000000;
 }
+.wrapper .skype:hover,
+.wrapper .skype:hover .tooltip,
+.wrapper .skype:hover .tooltip::before {
+  background-color: #28A8EA;
+  color: #ffffff;
+}
+.wrapper .orcid:hover,
+.wrapper .orcid:hover .tooltip,
+.wrapper .orcid:hover .tooltip::before {
+  background-color: #A6CE39;
+  color: #000000;
+}

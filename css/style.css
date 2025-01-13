@@ -1510,3 +1510,9 @@ body.offcanvas {
   background-color: #E7002E;
   color: #ffffff;
 }
+.wrapper .researchgate:hover,
+.wrapper .researchgate:hover .tooltip,
+.wrapper .researchgate:hover .tooltip::before {
+  background-color: #D0EEED;
+  color: #000000;
+}

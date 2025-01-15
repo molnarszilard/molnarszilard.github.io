@@ -433,12 +433,27 @@
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="project" style="background-image: url(images/car_obb_representation3.png);">
+							<div class="project" style="background-image: url(images/Kepaf2025poster.png);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="https://molnarszilard.github.io/DOBB/">DOBB</a></h3>
-										<span>Direcitonal Oriented Bounding Box (DOBB) detection: 
-											Currently under progress work which is destined to detect an additional/specific direction of an oriented bounding box.
+										<h3><a href="https://molnarszilard.github.io/DOBB/">Directional Bounding Boxes for Oriented Object
+											Detection</a></h3>
+										<span>In crowded scenes standard (or horizontal) bounding boxes
+											(BB) are not ideal, hence oriented bounding boxes (OBB) became pop-
+											ular which localizes objects by a minimal enclosing box. This bounding
+											box orientation does not necessarily correspond to the orientation of the
+											detected object – e.g. the front of an airplane or a car is not extracted
+											by OBB. Heading detection attempts to address this issue, however, non-
+											rectangular objects’ direction cannot be described by one side of an OBB.
+											Herein, we propose a novel method, the Directional Object Bounding
+											Box (DOBB), which is capable of detecting the object’s own direction
+											together with its minimal enclosing box (OBB), yet independently from
+											it. The proposed method is integrated into the popular YOLO object de-
+											tector to create a single neural network that predicts minimal enclosing
+											boxes, class probabilities, and object directions directly from full images
+											in one evaluation. With a novel loss function, it can be trained end-to-
+											end directly on oriented object detection. Comparative tests confirm its
+											state-of-the-art performance on both man-made and natural objects.
 										</span>
 									</div>
 								</div>

@@ -46,23 +46,21 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Directional Bounding Boxes for Oriented Object
-            Detection</h1>
+          <h1 class="title is-1 publication-title">Direction Estimation Techniques based on OBB detection</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://molnarszilard.github.io/">Szilárd Molnár</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="http://rocon.utcluj.ro/~levente">Levente Tamás</a><sup>1</sup>, and</span>
               <span class="author-block">
-                <a href="http://www.inf.u-szeged.hu/~kato/">Zoltán Kató</a><sup>2,3</sup></span>
+                <a href="http://www.inf.u-szeged.hu/~kato/">Zoltán Kató</a><sup>2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">1 - Technical University of Cluj-Napoca, Memorandumului 28, 400114 Romania
               {Szilard.Molnar,Levente.Tamas}@aut.utcluj.ro
             </span>
-            <span class="author-block">2 - J. Selye University, Slovakia</span>
-            <span class="author-block">3 - Institute of Informatics, University of Szeged, Hungary, kato@inf.u-szeged.hu</span>
+            <span class="author-block">2 - Institute of Informatics, University of Szeged, Hungary, kato@inf.u-szeged.hu</span>
           </div>
 
           <div class="column has-text-centered">
@@ -82,7 +80,7 @@
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Content</h2>
+          <h2 class="title is-3">Directional Bounding Boxes for Oriented Object Detection</h2>
           <div class="content has-text-justified">
             <p>Direcitonal Oriented Bounding Box (DOBB) detection: Currently under progress work which is destined to detect an 
               additional/specific direction of an oriented bounding box. The Code will be available after the article is published.
@@ -97,6 +95,68 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Dataset. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Directional Object Detection in Aerial Images</h2>
+          <div class="content has-text-justified">
+            <p>Object detection in remote sensing consists in localizing objects of interest on the Earth’s surface, and of
+course recognizing them. In such aerial images objects are seen from above, from a relatively large distance which makes them
+essentially ”planar”, i.e., we get a standard view of them. Classical object detectors must deal with a wide range of distinct side-
+views, generally oriented upward due to gravity - while objects in aerial images appear with an arbitrary orientation on the ground
+plane. This naturally leads to the question: Can we detect the direction of an object along with its location and object category?
+So called oriented bounding boxes (OBB) became standard in remote sensing due the crowded scenes, especially for rotated
+and elongated objects (e.g., parking cars in a parking lot). OBBs localizes objects by a minimal enclosing box thus oriented refers
+to a rotation angle of a standard BB for a tight enclosing of the detected object with respect to the image axes. However, this
+bounding box orientation does not correspond to the orientation of the detected object, e.g., the front of an airplane or a car,
+stem of a leaf, which provides valuable information for aerial image analysis. Herein, we propose a novel method, the Directed
+Object Detector (DOD), which is capable of detecting the object’s own direction together with its minimal enclosing OBB. This
+is integrated into an existing object detector to create a single end-to-end neural network. Experimental validation confirms
+the state of the art performance on both close and far-range remote sensing images in man-made and natural environments.
+Furthermore, we prove the advantage of DOD over the OBB approach in an image rectification application, which generally
+is not solvable with OBB.
+
+The Code will be available after the article is published. On special request contact the authors.</p>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@Article{molnar2023fpncanopy,
+      author  = {Szilard Molnar and Levente Tamas and Zoltan Kato},
+      journal = {In progress},
+      title   = {{Directional Bounding Boxes for Oriented Object Detection}},
+      year    = {},
+      note    = {},
+      number  = {},
+      pages   = {},
+      volume  = {},
+      doi     = {},
+    }
+    </code></pre>
+
+    <pre><code>@InProceedings{molnar2023segmentationmethodsevaluation,
+      author    = {Szilard Molnar and Levente Tamas and Zoltan Kato},
+      booktitle = {Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS), Bucharest, Romania, September 2-4, 2025},
+      title     = {{Directional Object Detection in Aerial Images}},
+      year      = {2025},
+      pages     = {},
+    }    
+    </code></pre>
+
+  </div>
+</section>
 
 </body>
 </html>

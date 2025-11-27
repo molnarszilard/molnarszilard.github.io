@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="keywords" content="direction, oriented bounding box">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DOBB - under progress</title>
+  <title>DOBB & DOD</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -81,11 +81,33 @@
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Directional Bounding Boxes for Oriented Object Detection - Upcoming</h2>
+          <h2 class="title is-3">Object-Based Camera Pose Estimation from a Single Object Detection and Gravity Vector</h2>
           <div class="content has-text-justified">
-            <p>Direcitonal Oriented Bounding Box (DOBB) detection: Currently under progress work which is destined to detect an 
-              additional/specific direction of an oriented bounding box. The Code will be available after the article is published.
-              On special request contact the authors.</p>            
+            <p>Recent results on pose estimation from ellipsoid-ellipse cor-
+              respondences, which can be readily obtained from an object detector,
+              allow a direct computation of the camera pose from object-level corre-
+              spondences. Unfortunately, standard bounding boxes (either horizontal
+              or minimal enclosing boxes) are symmetric, which introduces an inher-
+              ent ambiguity in the correspondence, yielding multiple or even infinite
+              solutions. Furthermore, the current state of the art requires minimum
+              two such correspondences to provide sufficient constraints for camera
+              rotation. Our contributions make object-based pose estimation efficient
+              in practice: First, a novel object detection method is proposed, called
+              Directional Object Bounding Box (DOBB), which is capable of detect-
+              ing the object’s own direction together with its minimal enclosing box
+              (OBB), yet independently from it, which not only breaks the symmetry
+              of OBBs, but also provides the necessary additional geometric informa-
+              tion for our pose estimation method. Second, a novel object-based robust
+              camera pose estimation pipeline is proposed where a minimal solution
+              can be obtained from a single object for outlier filtering when vertical
+              direction and the object orientation w.r.t. that axis are known; followed
+              by a closed-form least squares solution for multiple inlier objects to com-
+              pute the camera pose. Comparative tests confirm the state-of-the-art
+              performance of the proposed DOBB-based pose estimation method on
+              the standard KITTI360 and 7-Scenes datasets.
+            </p>
+            <p>The Code will be available after the article is published. On special request contact the authors.</p>
+            <center><img src="static/images/arch_horz3_with_rectified-image_examples_car.png" alt="Alternative Text" width="80%" class="center"></center>
           </div>
         </div>
       </div>
@@ -103,25 +125,24 @@
           <h2 class="title is-3">Directional Object Detection in Aerial Images</h2>
           <div class="content has-text-justified">
             <p>Object detection in remote sensing consists in localizing objects of interest on the Earth’s surface, and of
-course recognizing them. In such aerial images objects are seen from above, from a relatively large distance which makes them
-essentially ”planar”, i.e., we get a standard view of them. Classical object detectors must deal with a wide range of distinct side-
-views, generally oriented upward due to gravity - while objects in aerial images appear with an arbitrary orientation on the ground
-plane. This naturally leads to the question: Can we detect the direction of an object along with its location and object category?
-So called oriented bounding boxes (OBB) became standard in remote sensing due the crowded scenes, especially for rotated
-and elongated objects (e.g., parking cars in a parking lot). OBBs localizes objects by a minimal enclosing box thus oriented refers
-to a rotation angle of a standard BB for a tight enclosing of the detected object with respect to the image axes. However, this
-bounding box orientation does not correspond to the orientation of the detected object, e.g., the front of an airplane or a car,
-stem of a leaf, which provides valuable information for aerial image analysis. Herein, we propose a novel method, the Directed
-Object Detector (DOD), which is capable of detecting the object’s own direction together with its minimal enclosing OBB. This
-is integrated into an existing object detector to create a single end-to-end neural network. Experimental validation confirms
-the state of the art performance on both close and far-range remote sensing images in man-made and natural environments.
-Furthermore, we prove the advantage of DOD over the OBB approach in an image rectification application, which generally
-is not solvable with OBB.
+              course recognizing them. In such aerial images objects are seen from above, from a relatively large distance which makes them
+              essentially ”planar”, i.e., we get a standard view of them. Classical object detectors must deal with a wide range of distinct side-
+              views, generally oriented upward due to gravity - while objects in aerial images appear with an arbitrary orientation on the ground
+              plane. This naturally leads to the question: Can we detect the direction of an object along with its location and object category?
+              So called oriented bounding boxes (OBB) became standard in remote sensing due the crowded scenes, especially for rotated
+              and elongated objects (e.g., parking cars in a parking lot). OBBs localizes objects by a minimal enclosing box thus oriented refers
+              to a rotation angle of a standard BB for a tight enclosing of the detected object with respect to the image axes. However, this
+              bounding box orientation does not correspond to the orientation of the detected object, e.g., the front of an airplane or a car,
+              stem of a leaf, which provides valuable information for aerial image analysis. Herein, we propose a novel method, the Directed
+              Object Detector (DOD), which is capable of detecting the object’s own direction together with its minimal enclosing OBB. This
+              is integrated into an existing object detector to create a single end-to-end neural network. Experimental validation confirms
+              the state of the art performance on both close and far-range remote sensing images in man-made and natural environments.
+              Furthermore, we prove the advantage of DOD over the OBB approach in an image rectification application, which generally
+              is not solvable with OBB.
             </p>
             <p>The Code will be available after the article is published. On special request contact the authors.</p>
-            
+            <center><img src="static/images/arch_horz_simplified3_withimage.png" alt="Alternative Text" width="80%" class="center"></center>
           </div>
-
         </div>
       </div>
     </div>
@@ -132,19 +153,24 @@ is not solvable with OBB.
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@Article{molnar2025dobb,
-      author  = {Szilard Molnar and Zita Amstadt and Levente Tamas and Zoltan Kato},
-      journal = {In progress},
-      title   = {{Directional Bounding Boxes for Oriented Object Detection}},
-    }
+    <pre><code>@InProceedings{molnar2025isvc_dobb_objectbasedcamerapose,
+  author    = {Molnar, Szilard and Amstadt, Zita and Tamas, Levente and Kato, Zoltan},
+  booktitle = {{ISVC 2025 20th International Symposium on Visual Computing}},
+  title     = {{Object-Based Camera Pose Estimation from a Single Object Detection and Gravity Vector}},
+  year      = {2025},
+  note      = {Presented at the convference, waiting for the proceeding publication},
+}
     </code></pre>
 
-    <pre><code>@InProceedings{molnar2025migars_dod,
-      author    = {Szilard Molnar and Levente Tamas and Zoltan Kato},
-      booktitle = {Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS), Bucharest, Romania, September 2-4, 2025},
-      title     = {{Directional Object Detection in Aerial Images}},
-      year      = {2025},
-    }    
+    <pre><code>@InProceedings{molnar2025migars_DOD_directionalobjectdetection,
+  author    = {Molnar, Szilard and Tamas, Levente and Kato, Zoltan},
+  booktitle = {{2025 International Conference on Machine Intelligence for GeoAnalytics and Remote Sensing (MIGARS)}},
+  title     = {{Directional Object Detection in Aerial Images}},
+  year      = {2025},
+  pages     = {1--4},
+  doi       = {10.1109/MIGARS67156.2025.11231783},
+}
+
     </code></pre>
 
   </div>

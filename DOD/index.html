@@ -78,21 +78,32 @@
         <div class="content">
           <h2 class="title is-3">Directional Object Detection in Aerial Images</h2>
           <div class="content has-text-justified">
-            <p>Object detection in remote sensing consists in localizing objects of interest on the Earth’s surface, and of
-              course recognizing them. In such aerial images objects are seen from above, from a relatively large distance which makes them
-              essentially ”planar”, i.e., we get a standard view of them. Classical object detectors must deal with a wide range of distinct side-
-              views, generally oriented upward due to gravity - while objects in aerial images appear with an arbitrary orientation on the ground
-              plane. This naturally leads to the question: Can we detect the direction of an object along with its location and object category?
-              So called oriented bounding boxes (OBB) became standard in remote sensing due the crowded scenes, especially for rotated
-              and elongated objects (e.g., parking cars in a parking lot). OBBs localizes objects by a minimal enclosing box thus oriented refers
-              to a rotation angle of a standard BB for a tight enclosing of the detected object with respect to the image axes. However, this
-              bounding box orientation does not correspond to the orientation of the detected object, e.g., the front of an airplane or a car,
-              stem of a leaf, which provides valuable information for aerial image analysis. Herein, we propose a novel method, the Directed
-              Object Detector (DOD), which is capable of detecting the object’s own direction together with its minimal enclosing OBB. This
-              is integrated into an existing object detector to create a single end-to-end neural network. Experimental validation confirms
-              the state of the art performance on both close and far-range remote sensing images in man-made and natural environments.
-              Furthermore, we prove the advantage of DOD over the OBB approach in an image rectification application, which generally
-              is not solvable with OBB.
+            <p>Object detection in remote sensing consists in rec-
+              ognizing and localizing objects of interest on the Earth’s surface.
+              Classical object detectors must deal with a wide range of distinct
+              side-views, generally oriented upward due to gravity, while
+              objects in aerial images appear in a quasi-standard bird-eye view
+              with an arbitrary orientation and low resolution on the ground
+              plane. This naturally leads to the question: Can we detect the
+              direction of an object along with its location and object category?
+              So-called oriented bounding boxes (OBB) became standard in
+              remote sensing due to the crowded scenes, especially for rotated
+              and elongated objects (e.g., parking cars in a parking lot). OBBs
+              localizes objects by a minimal enclosing box, thus oriented refers
+              to a rotation angle of a standard BB for a tight enclosing of
+              the detected object with respect to the image axes. However, this
+              bounding box orientation does not correspond to the orientation
+              of the detected object, e.g., the front of an airplane or a car,
+              the stem of a leaf, which provides valuable information for
+              aerial image analysis. Herein, we propose a novel method, the
+              Directed Object Detector (DOD), which is capable of detecting the
+              object’s direction together with its minimal enclosing OBB. This
+              is integrated into an object detector to create a single end-to-end
+              neural network. Experimental validation confirms the state of
+              the art performance on both close and far-range remote sensing
+              images in man-made and natural environments. Furthermore,
+              we prove the advantage of DOD over the OBB approach in an
+              image rectification application, which is not solvable with OBB.
             </p>
             <p>For more information read the <a href="https://ieeexplore.ieee.org/document/11231783">MIGARS2025 paper</a>. The Code will be available after the article is published. On special request contact the authors.</p>
             <center><img src="static/images/arch_horz_simplified3_withimage.png" alt="Alternative Text" width="80%" class="center"></center>
